@@ -600,6 +600,9 @@
             const seatsNumbers = Array.from(selectedSeats).map(seat => seat.textContent).join(', ');
             
             let message = `Reserva realizada com sucesso!\n\n`;
+              <script src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
+    data-preference-id="https://mpago.la/1FoN6FE">
+</script>
             message += `Assento(s): ${seatsNumbers}\n`;
             message += `Passageiros: ${passengers}\n`;
             message += `Peso bagagem: ${baggageWeight}kg\n`;
@@ -608,7 +611,7 @@
                 message += `Taxa de excesso de bagagem: R$${excessBaggage.toFixed(2)}\n`;
             }
             
-            message += `\nEntraremos em contato para confirmação. Obrigado por escolher a Javé Turismo!`;
+            message += `\nConfirme sua compra e assento pelo whatsapp!`;
             
             alert(message);
             this.reset();
